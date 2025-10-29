@@ -6,8 +6,7 @@ var UserSchema = new mongoose.Schema({
     name: String,
     email: String,
     pendingTasks: [String],
-    dateCreated: Dated
-
+    dateCreated: Date
 });
 
 // Export the Mongoose model

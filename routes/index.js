@@ -5,6 +5,6 @@ module.exports = function (app, router) {
     app.use('/api', require('./home.js')(router));
 
     // new routes
-    app.use("/api/users", require("./routes/users"));
-    app.use("/api/tasks", require("./routes/tasks"));
+    app.use("/api/users", require("./users"));
+    app.use("/api/tasks", require("./tasks"));
 };

@@ -9,8 +9,6 @@ router.get("/", async (req, res) => {
     res.json({ message: "OK", data: tasks });
 });
 
-module.exports = router;
-
 // GET task using the id---
 router.get("/:id", async (req, res) => {
     const task = await Task.findById(req.params.id);
@@ -25,3 +23,5 @@ router.post("/", async (req, res) => {
     await task.save();
     res.status(201).json(task);
 });
+
+module.exports = router;
